@@ -1,0 +1,18 @@
+# WordPress core (only theme is tracked)
+wp-content/plugins/
+wp-content/uploads/
+wp-content/upgrade/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Superpowers
+.superpowers/
