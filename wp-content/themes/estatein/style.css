@@ -901,3 +901,42 @@ h3 { font-size: var(--font-size-h3); }
     grid-template-columns: 1fr;
   }
 }
+
+/* === CTA === */
+.cta {
+  padding-block: var(--space-xl);
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.cta__heading {
+  margin-bottom: var(--space-sm);
+}
+
+.cta__description {
+  max-width: 800px;
+}
+
+.cta__button {
+  flex-shrink: 0;
+}
+
+/* === CTA RESPONSIVE === */
+@media (max-width: 767px) {
+  .cta__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta__button {
+    width: 100%;
+  }
+}
