@@ -972,18 +972,18 @@ input:focus-visible {
 }
 
 .cta__decor--left {
-  bottom: 0;
-  left: 0;
-  width: 546px;
+  bottom: -1px;
+  left: -20px;
+  width: 566px;
   height: auto;
 }
 
 .cta__decor--right {
-  bottom: 0;
-  right: 0;
-  width: 633px;
+  top: -64px;
+  right: -92px;
+  width: 725px;
   height: auto;
-  transform: rotate(180deg) scaleY(-1);
+  transform: scaleX(-1);
 }
 
 .cta__inner {
