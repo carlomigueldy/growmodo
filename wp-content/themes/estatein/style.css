@@ -1085,27 +1085,17 @@ input:focus-visible {
 
 /* === FAQ === */
 .faq__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  overflow: hidden;
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
 }
 
 .faq-card.card {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  border-right: 1px solid var(--color-border);
-}
-
-.faq-card.card:last-child {
-  border-right: none;
-}
-
-.faq-card.card:hover {
-  border-color: var(--color-border);
+  flex: 1 0 0;
+  min-width: 0;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
 }
 
 .faq-card {
@@ -1162,14 +1152,11 @@ input:focus-visible {
 /* === FAQ RESPONSIVE === */
 @media (max-width: 1023px) {
   .faq__grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
+
   .faq-card.card {
-    border-right: none;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .faq-card.card:last-child {
-    border-bottom: none;
+    flex: none;
   }
 }
 
