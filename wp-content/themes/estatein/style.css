@@ -846,3 +846,58 @@ h3 { font-size: var(--font-size-h3); }
     grid-template-columns: 1fr;
   }
 }
+
+/* === FAQ === */
+.faq__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.faq-card {
+  padding: 0;
+}
+
+.faq-card__body {
+  padding: var(--space-lg) var(--space-md);
+}
+
+.faq-card__question {
+  margin-bottom: var(--space-sm);
+}
+
+.faq-card__answer {
+  font-size: var(--font-size-small);
+  margin-bottom: var(--space-md);
+}
+
+.faq-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition);
+}
+
+.faq-card__link:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+/* === FAQ RESPONSIVE === */
+@media (max-width: 1023px) {
+  .faq__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .faq__grid {
+    grid-template-columns: 1fr;
+  }
+}
