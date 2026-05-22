@@ -6,6 +6,8 @@ $btn_url     = estatein_get_field('cta_button_url') ?: '#properties';
 ?>
 
 <section class="cta" aria-label="<?php esc_attr_e('Call to action', 'estatein'); ?>">
+    <img class="cta__decor cta__decor--left" src="<?php echo esc_url(get_theme_file_uri('assets/images/abstract-design-left.png')); ?>" alt="" aria-hidden="true" loading="lazy" width="566" height="308">
+    <img class="cta__decor cta__decor--right" src="<?php echo esc_url(get_theme_file_uri('assets/images/abstract-design-right.png')); ?>" alt="" aria-hidden="true" loading="lazy" width="725" height="394">
     <div class="container">
         <div class="cta__inner">
             <div class="cta__content">
