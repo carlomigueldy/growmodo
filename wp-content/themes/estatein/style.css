@@ -779,7 +779,7 @@ input:focus-visible {
 .features__grid {
   display: flex;
   gap: 20px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .feature-card {
