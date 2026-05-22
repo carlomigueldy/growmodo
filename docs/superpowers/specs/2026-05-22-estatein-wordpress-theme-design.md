@@ -30,7 +30,7 @@ growmodo/
 ├── .env
 ├── wp-content/
 │   └── themes/
-│       └── flavor-flavor/
+│       └── estatein/
 │           ├── style.css
 │           ├── functions.php
 │           ├── front-page.php
@@ -280,7 +280,7 @@ services:
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - wordpress_data:/var/www/html
-      - ./wp-content/themes/flavor-flavor:/var/www/html/wp-content/themes/flavor-flavor
+      - ./wp-content/themes/estatein:/var/www/html/wp-content/themes/estatein
     depends_on:
       - db
 
@@ -309,7 +309,7 @@ Minimal JS in `assets/js/main.js`:
 
 ## Deliverables Checklist
 
-1. Custom WordPress theme source code in `wp-content/themes/flavor-flavor/`
+1. Custom WordPress theme source code in `wp-content/themes/estatein/`
 2. `docker-compose.yml` + `.env.example` for local setup
 3. `README.md` with setup instructions, dev process explanation, and tool/plugin choices
 4. Screenshot of running site for quick reference
