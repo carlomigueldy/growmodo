@@ -6,6 +6,7 @@ $testimonials = [
         'text'     => 'Our experience with Estatein was outstanding. Their team\'s dedication and professionalism made finding our dream home a breeze. Highly recommended!',
         'name'     => 'Wade Warren',
         'location' => 'USA, California',
+        'avatar'   => 'avatar-wade.png',
     ],
     [
         'rating'   => 5,
@@ -13,6 +14,7 @@ $testimonials = [
         'text'     => 'Estatein provided us with top-notch service. They helped us sell our property quickly and at a great price. We couldn\'t be happier with the results.',
         'name'     => 'Emelie Thomson',
         'location' => 'USA, Florida',
+        'avatar'   => 'avatar-emelie.png',
     ],
     [
         'rating'   => 5,
@@ -20,6 +22,7 @@ $testimonials = [
         'text'     => 'The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!',
         'name'     => 'John Mans',
         'location' => 'USA, Nevada',
+        'avatar'   => 'avatar-john.png',
     ],
 ];
 ?>
@@ -29,9 +32,9 @@ $testimonials = [
         <div class="section__header">
             <div>
                 <div class="section__icon" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
-                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
-                    <svg width="8" height="8" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
                 </div>
                 <h2 class="section__title">What Our Clients Say</h2>
                 <p class="section__description">Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.</p>
@@ -44,15 +47,26 @@ $testimonials = [
                 <div class="testimonial-card card">
                     <div class="testimonial-card__stars" aria-label="<?php echo esc_attr($testimonial['rating']); ?> out of 5 stars">
                         <?php for ($i = 0; $i < $testimonial['rating']; $i++) : ?>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 1L12.5 6.5L18.5 7.5L14.25 11.75L15.25 17.75L10 15L4.75 17.75L5.75 11.75L1.5 7.5L7.5 6.5L10 1Z" fill="var(--color-star)"/></svg>
+                            <img
+                                src="<?php echo esc_url( get_theme_file_uri( 'assets/images/star-rating.svg' ) ); ?>"
+                                width="44"
+                                height="44"
+                                alt=""
+                                aria-hidden="true"
+                                class="testimonial-card__star"
+                            >
                         <?php endfor; ?>
                     </div>
                     <h3 class="testimonial-card__title"><?php echo esc_html($testimonial['title']); ?></h3>
                     <p class="testimonial-card__text"><?php echo esc_html($testimonial['text']); ?></p>
                     <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar" aria-hidden="true">
-                            <?php echo esc_html(mb_substr($testimonial['name'], 0, 1)); ?>
-                        </div>
+                        <img
+                            src="<?php echo esc_url( get_theme_file_uri( 'assets/images/' . $testimonial['avatar'] ) ); ?>"
+                            width="60"
+                            height="60"
+                            alt="<?php echo esc_attr( $testimonial['name'] ); ?>"
+                            class="testimonial-card__avatar"
+                        >
                         <div>
                             <span class="testimonial-card__name"><?php echo esc_html($testimonial['name']); ?></span>
                             <span class="testimonial-card__location"><?php echo esc_html($testimonial['location']); ?></span>

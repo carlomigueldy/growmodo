@@ -13,9 +13,9 @@ $total = wp_count_posts('property')->publish;
         <div class="section__header">
             <div>
                 <div class="section__icon" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
-                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
-                    <svg width="8" height="8" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
                 </div>
                 <h2 class="section__title">Featured Properties</h2>
                 <p class="section__description">Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click "View Details" for more information.</p>
@@ -25,7 +25,7 @@ $total = wp_count_posts('property')->publish;
 
         <?php if ($properties->have_posts()) : ?>
             <div class="property-grid">
-                <?php while ($properties->have_posts()) : $properties->the_post();
+                <?php $card_index = 0; while ($properties->have_posts()) : $properties->the_post();
                     $price    = estatein_get_field('property_price');
                     $beds     = estatein_get_field('property_bedrooms');
                     $baths    = estatein_get_field('property_bathrooms');
@@ -45,8 +45,21 @@ $total = wp_count_posts('property')->publish;
                                     'class'   => 'property-card__img',
                                     'loading' => 'lazy',
                                 ]); ?>
-                            <?php else : ?>
-                                <div class="property-card__img property-card__img--placeholder"></div>
+                            <?php else :
+                                $slug = sanitize_title(get_the_title());
+                                $image_map = [
+                                    'seaside-serenity-villa' => 'property-seaside.png',
+                                    'metropolitan-haven'     => 'property-metropolitan.png',
+                                    'rustic-retreat-cottage'  => 'property-rustic.png',
+                                ];
+                                $fallback_images = ['property-seaside.png', 'property-metropolitan.png', 'property-rustic.png'];
+                                $fallback = $image_map[$slug] ?? $fallback_images[$card_index % 3];
+                            ?>
+                                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/' . $fallback)); ?>"
+                                     alt="<?php the_title_attribute(); ?>"
+                                     class="property-card__img"
+                                     loading="lazy"
+                                     width="1060" height="706">
                             <?php endif; ?>
                         </div>
                         <div class="property-card__body">
@@ -61,19 +74,19 @@ $total = wp_count_posts('property')->publish;
                             <div class="property-card__meta">
                                 <?php if ($beds) : ?>
                                     <span class="property-card__meta-item">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21V14H21V21M3 14V10C3 8.89543 3.89543 8 5 8H19C20.1046 8 21 8.89543 21 10V14M7 8V6C7 4.89543 7.89543 4 9 4H15C16.1046 4 17 4.89543 17 6V8" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon-bed.png')); ?>" alt="" aria-hidden="true" width="24" height="24">
                                         <?php echo esc_html($beds); ?>-Bedroom
                                     </span>
                                 <?php endif; ?>
                                 <?php if ($baths) : ?>
                                     <span class="property-card__meta-item">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12H20V16C20 18.2091 18.2091 20 16 20H8C5.79086 20 4 18.2091 4 16V12ZM4 12V5C4 4.44772 4.44772 4 5 4H7C7.55228 4 8 4.44772 8 5V12" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon-bath.png')); ?>" alt="" aria-hidden="true" width="24" height="24">
                                         <?php echo esc_html($baths); ?>-Bathroom
                                     </span>
                                 <?php endif; ?>
                                 <?php if ($type) : ?>
                                     <span class="property-card__meta-item">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21V9L12 3L21 9V21H15V15H9V21H3Z" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon-villa.png')); ?>" alt="" aria-hidden="true" width="24" height="24">
                                         <?php echo esc_html($type_labels[$type] ?? ucfirst($type)); ?>
                                     </span>
                                 <?php endif; ?>
@@ -88,6 +101,7 @@ $total = wp_count_posts('property')->publish;
                             </div>
                         </div>
                     </article>
+                    <?php $card_index++; ?>
                 <?php endwhile; wp_reset_postdata(); ?>
             </div>
 

@@ -1,88 +1,98 @@
 <footer class="site-footer" role="contentinfo">
     <div class="container">
-        <div class="footer__top">
+        <div class="footer__main">
             <div class="footer__brand">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__logo" aria-label="<?php esc_attr_e('Estatein - Home', 'estatein'); ?>">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                        <rect width="48" height="48" rx="12" fill="var(--color-accent)"/>
-                        <path d="M14 34V18L24 12L34 18V34H28V26H20V34H14Z" fill="white"/>
+                    <svg class="footer__logo-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                        <path d="M24 48C10.7467 48 0 37.2533 0 24H24V48Z" fill="#703BF7"/>
+                        <path d="M0 0C13.2533 0 24 10.7467 24 24H0V0Z" fill="#703BF7"/>
+                        <path d="M24 48C37.2533 48 48 37.2533 48 24H24V48Z" fill="#703BF7"/>
+                        <path d="M48 24C48 10.7467 37.2533 0 24 0V24H48Z" fill="#703BF7"/>
                     </svg>
                     <span class="footer__logo-text">Estatein</span>
                 </a>
                 <form class="footer__subscribe" action="#" method="post" aria-label="<?php esc_attr_e('Newsletter subscription', 'estatein'); ?>">
                     <label for="footer-email" class="sr-only"><?php esc_html_e('Enter your email', 'estatein'); ?></label>
+                    <svg class="footer__mail-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M17 7H18V8C18 8.26522 18.1054 8.51957 18.2929 8.70711C18.4804 8.89464 18.7348 9 19 9C19.2652 9 19.5196 8.89464 19.7071 8.70711C19.8946 8.51957 20 8.26522 20 8V7H21C21.2652 7 21.5196 6.89464 21.7071 6.70711C21.8946 6.51957 22 6.26522 22 6C22 5.73478 21.8946 5.48043 21.7071 5.29289C21.5196 5.10536 21.2652 5 21 5H20V4C20 3.73478 19.8946 3.48043 19.7071 3.29289C19.5196 3.10536 19.2652 3 19 3C18.7348 3 18.4804 3.10536 18.2929 3.29289C18.1054 3.48043 18 3.73478 18 4V5H17C16.7348 5 16.4804 5.10536 16.2929 5.29289C16.1054 5.48043 16 5.73478 16 6C16 6.26522 16.1054 6.51957 16.2929 6.70711C16.4804 6.89464 16.7348 7 17 7ZM21 11C20.7348 11 20.4804 11.1054 20.2929 11.2929C20.1054 11.4804 20 11.7348 20 12V18C20 18.2652 19.8946 18.5196 19.7071 18.7071C19.5196 18.8946 19.2652 19 19 19H5C4.73478 19 4.48043 18.8946 4.29289 18.7071C4.10536 18.5196 4 18.2652 4 18V8.41L9.88 14.3C10.4425 14.8618 11.205 15.1774 12 15.1774C12.795 15.1774 13.5575 14.8618 14.12 14.3L16.59 11.83C16.7783 11.6417 16.8841 11.3863 16.8841 11.12C16.8841 10.8537 16.7783 10.5983 16.59 10.41C16.4017 10.2217 16.1463 10.1159 15.88 10.1159C15.6137 10.1159 15.3583 10.2217 15.17 10.41L12.7 12.88C12.5131 13.0632 12.2618 13.1659 12 13.1659C11.7382 13.1659 11.4869 13.0632 11.3 12.88L5.41 7H13C13.2652 7 13.5196 6.89464 13.7071 6.70711C13.8946 6.51957 14 6.26522 14 6C14 5.73478 13.8946 5.48043 13.7071 5.29289C13.5196 5.10536 13.2652 5 13 5H5C4.20435 5 3.44129 5.31607 2.87868 5.87868C2.31607 6.44129 2 7.20435 2 8V18C2 18.7956 2.31607 19.5587 2.87868 20.1213C3.44129 20.6839 4.20435 21 5 21H19C19.7956 21 20.5587 20.6839 21.1213 20.1213C21.6839 19.5587 22 18.7956 22 18V12C22 11.7348 21.8946 11.4804 21.7071 11.2929C21.5196 11.1054 21.2652 11 21 11Z" fill="#999"/>
+                    </svg>
                     <input type="email" id="footer-email" name="email" class="footer__input" placeholder="<?php esc_attr_e('Enter Your Email', 'estatein'); ?>" required>
                     <button type="submit" class="footer__submit" aria-label="<?php esc_attr_e('Subscribe', 'estatein'); ?>">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="30" height="30" viewBox="0 0 25 25" fill="none" aria-hidden="true">
+                            <path d="M24.2843 0.722873C23.6593 0.0841233 22.7343 -0.152127 21.8718 0.0978732L1.75928 5.90912C0.849275 6.16162 0.204275 6.88287 0.0305252 7.79787C-0.146975 8.73037 0.473025 9.91537 1.28303 10.4104L7.57178 14.2504C8.21678 14.6454 9.04927 14.5466 9.58302 14.0116L16.7843 6.81037C17.1468 6.43412 17.7468 6.43412 18.1093 6.81037C18.4718 7.17162 18.4718 7.76037 18.1093 8.13537L10.8955 15.3366C10.3605 15.8716 10.2605 16.7016 10.6543 17.3479L14.4968 23.6604C14.9468 24.4091 15.7218 24.8354 16.5718 24.8354C16.6718 24.8354 16.7843 24.8354 16.8843 24.8216C17.8593 24.6979 18.6343 24.0341 18.9218 23.0966L24.8843 3.13537C25.1468 2.28537 24.9093 1.36037 24.2843 0.722873Z" fill="white"/>
+                            <path opacity="0.4" d="M9.31428 21.4277C9.67928 21.794 9.67928 22.3877 9.31428 22.754L7.60677 24.4602C7.42427 24.644 7.18428 24.7352 6.94428 24.7352C6.70428 24.7352 6.46427 24.644 6.28177 24.4602C5.91552 24.094 5.91552 23.5015 6.28177 23.1352L7.98802 21.4277C8.35427 21.0627 8.94803 21.0627 9.31428 21.4277ZM8.33465 16.6927C8.69965 17.059 8.69965 17.6527 8.33465 18.019L6.62715 19.7252C6.44465 19.909 6.20465 20.0002 5.96465 20.0002C5.72465 20.0002 5.48465 19.909 5.30215 19.7252C4.9359 19.359 4.9359 18.7665 5.30215 18.4002L7.0084 16.6927C7.37465 16.3277 7.9684 16.3277 8.33465 16.6927ZM3.63315 15.2022C3.99815 15.5685 3.99815 16.1622 3.63315 16.5285L1.92565 18.2347C1.74315 18.4185 1.50315 18.5097 1.26315 18.5097C1.02315 18.5097 0.78315 18.4185 0.60065 18.2347C0.2344 17.8685 0.2344 17.276 0.60065 16.9097L2.3069 15.2022C2.67315 14.8372 3.2669 14.8372 3.63315 15.2022Z" fill="white"/>
+                        </svg>
                     </button>
                 </form>
             </div>
-            <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="Facebook">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="#" class="footer__social-link" aria-label="LinkedIn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
-                </a>
-                <a href="#" class="footer__social-link" aria-label="Twitter">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 4.01C21 4.5 20.02 4.69 19 5C17.879 3.735 16.217 3.665 14.62 4.263C13.023 4.861 12.004 6.323 12 8.01V9.01C8.755 9.083 5.865 7.605 4 5.01C4 5.01 -0.182 12.94 8 17.01C6.128 18.247 4.261 19.088 2 19.01C5.308 20.687 8.913 21.167 12.034 20.12C15.614 18.906 18.556 15.96 19.685 11.548C20.0218 10.1584 20.189 8.73258 20.183 7.303C20.18 6.92 21.692 5.248 22 4.009V4.01Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="#" class="footer__social-link" aria-label="YouTube">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42C22.4212 5.94541 22.1792 5.51057 21.8386 5.15941C21.498 4.80824 21.0707 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991228 9.97631 1 11.75C0.988741 13.537 1.14277 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51797 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0707 18.8668 21.498 18.6118 21.8386 18.2606C22.1792 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0113 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-            </div>
-        </div>
 
-        <div class="footer__nav">
-            <div class="footer__nav-col">
-                <h4 class="footer__nav-title">Home</h4>
-                <ul class="footer__nav-list">
-                    <li><a href="#hero" class="footer__nav-link">Hero Section</a></li>
-                    <li><a href="#features" class="footer__nav-link">Features</a></li>
-                    <li><a href="#properties" class="footer__nav-link">Properties</a></li>
-                    <li><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
-                    <li><a href="#faq" class="footer__nav-link">FAQ's</a></li>
-                </ul>
-            </div>
-            <div class="footer__nav-col">
-                <h4 class="footer__nav-title">About Us</h4>
-                <ul class="footer__nav-list">
-                    <li><a href="#" class="footer__nav-link">Our Story</a></li>
-                    <li><a href="#" class="footer__nav-link">Our Works</a></li>
-                    <li><a href="#" class="footer__nav-link">How It Works</a></li>
-                    <li><a href="#" class="footer__nav-link">Our Team</a></li>
-                    <li><a href="#" class="footer__nav-link">Our Clients</a></li>
-                </ul>
-            </div>
-            <div class="footer__nav-col">
-                <h4 class="footer__nav-title">Properties</h4>
-                <ul class="footer__nav-list">
-                    <li><a href="#" class="footer__nav-link">Portfolio</a></li>
-                    <li><a href="#" class="footer__nav-link">Categories</a></li>
-                </ul>
-            </div>
-            <div class="footer__nav-col">
-                <h4 class="footer__nav-title">Services</h4>
-                <ul class="footer__nav-list">
-                    <li><a href="#" class="footer__nav-link">Valuation Mastery</a></li>
-                    <li><a href="#" class="footer__nav-link">Strategic Marketing</a></li>
-                    <li><a href="#" class="footer__nav-link">Negotiation Wizardry</a></li>
-                    <li><a href="#" class="footer__nav-link">Closing Success</a></li>
-                    <li><a href="#" class="footer__nav-link">Property Management</a></li>
-                </ul>
-            </div>
-            <div class="footer__nav-col">
-                <h4 class="footer__nav-title">Contact Us</h4>
-                <ul class="footer__nav-list">
-                    <li><a href="#" class="footer__nav-link">Contact Form</a></li>
-                    <li><a href="#" class="footer__nav-link">Our Offices</a></li>
-                </ul>
-            </div>
+            <nav class="footer__nav" aria-label="<?php esc_attr_e('Footer navigation', 'estatein'); ?>">
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-title">Home</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#hero" class="footer__nav-link">Hero Section</a></li>
+                        <li><a href="#features" class="footer__nav-link">Features</a></li>
+                        <li><a href="#properties" class="footer__nav-link">Properties</a></li>
+                        <li><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+                        <li><a href="#faq" class="footer__nav-link">FAQ's</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-title">About Us</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Our Story</a></li>
+                        <li><a href="#" class="footer__nav-link">Our Works</a></li>
+                        <li><a href="#" class="footer__nav-link">How It Works</a></li>
+                        <li><a href="#" class="footer__nav-link">Our Team</a></li>
+                        <li><a href="#" class="footer__nav-link">Our Clients</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-title">Properties</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Portfolio</a></li>
+                        <li><a href="#" class="footer__nav-link">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-title">Services</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Valuation Mastery</a></li>
+                        <li><a href="#" class="footer__nav-link">Strategic Marketing</a></li>
+                        <li><a href="#" class="footer__nav-link">Negotiation Wizardry</a></li>
+                        <li><a href="#" class="footer__nav-link">Closing Success</a></li>
+                        <li><a href="#" class="footer__nav-link">Property Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-title">Contact Us</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Contact Form</a></li>
+                        <li><a href="#" class="footer__nav-link">Our Offices</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
 
         <div class="footer__bottom">
-            <p class="footer__copyright">&copy;<?php echo esc_html(date('Y')); ?> Estatein. All Rights Reserved.</p>
-            <a href="#" class="footer__terms">Terms &amp; Conditions</a>
+            <div class="footer__bottom-left">
+                <p class="footer__copyright">@2023 Estatein. All Rights Reserved.</p>
+                <a href="#" class="footer__terms">Terms &amp; Conditions</a>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15.7442 3.98403H18.0002V0.168036C16.9079 0.0544523 15.8104 -0.00162514 14.7122 3.58369e-05C11.4482 3.58369e-05 9.21622 1.99203 9.21622 5.64003V8.78402H5.53223V13.056H9.21622V24H13.6322V13.056H17.3042L17.8562 8.78402H13.6322V6.06003C13.6322 4.80003 13.9682 3.98403 15.7442 3.98403Z" fill="white"/></svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.47 2H3.53C3.33958 1.99736 3.1505 2.03225 2.97357 2.10268C2.79663 2.17312 2.6353 2.27772 2.4988 2.41051C2.36229 2.5433 2.25328 2.70168 2.17799 2.87661C2.1027 3.05153 2.06261 3.23958 2.06 3.43V20.57C2.06261 20.7604 2.1027 20.9485 2.17799 21.1234C2.25328 21.2983 2.36229 21.4567 2.4988 21.5895C2.6353 21.7223 2.79663 21.8269 2.97357 21.8973C3.1505 21.9678 3.33958 22.0026 3.53 22H20.47C20.6604 22.0026 20.8495 21.9678 21.0264 21.8973C21.2034 21.8269 21.3647 21.7223 21.5012 21.5895C21.6377 21.4567 21.7467 21.2983 21.822 21.1234C21.8973 20.9485 21.9374 20.7604 21.94 20.57V3.43C21.9374 3.23958 21.8973 3.05153 21.822 2.87661C21.7467 2.70168 21.6377 2.5433 21.5012 2.41051C21.3647 2.27772 21.2034 2.17312 21.0264 2.10268C20.8495 2.03225 20.6604 1.99736 20.47 2ZM8.09 18.74H5.09V9.74H8.09V18.74ZM6.59 8.48C6.17626 8.48 5.77947 8.31564 5.48691 8.02309C5.19436 7.73053 5.03 7.33374 5.03 6.92C5.03 6.50626 5.19436 6.10947 5.48691 5.81691C5.77947 5.52436 6.17626 5.36 6.59 5.36C6.8097 5.33508 7.03218 5.35685 7.24288 5.42388C7.45357 5.49091 7.64774 5.60169 7.81266 5.74896C7.97757 5.89623 8.10953 6.07668 8.19987 6.27848C8.29022 6.48029 8.33692 6.6989 8.33692 6.92C8.33692 7.1411 8.29022 7.35971 8.19987 7.56152C8.10953 7.76332 7.97757 7.94377 7.81266 8.09104C7.64774 8.23831 7.45357 8.34909 7.24288 8.41612C7.03218 8.48315 6.8097 8.50491 6.59 8.48ZM18.91 18.74H15.91V13.91C15.91 12.7 15.48 11.91 14.39 11.91C14.0527 11.9125 13.7242 12.0183 13.4488 12.2132C13.1735 12.4081 12.9645 12.6827 12.85 13C12.7717 13.235 12.7378 13.4826 12.75 13.73V18.73H9.75C9.75 18.73 9.75 10.55 9.75 9.73H12.75V11C13.0225 10.5271 13.4189 10.1375 13.8964 9.8732C14.374 9.60888 14.9146 9.47985 15.46 9.5C17.46 9.5 18.91 10.79 18.91 13.56V18.74Z" fill="white"/></svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 5.8C21.2483 6.12609 20.4534 6.34166 19.64 6.44C20.4982 5.92732 21.1413 5.12078 21.45 4.17C20.6436 4.65006 19.7608 4.9883 18.84 5.17C18.2245 4.50257 17.405 4.0583 16.5098 3.90685C15.6147 3.75541 14.6945 3.90536 13.8938 4.33319C13.093 4.76102 12.4569 5.44253 12.0852 6.27084C11.7135 7.09914 11.6273 8.02739 11.84 8.91C10.2094 8.82753 8.61444 8.40295 7.15865 7.66386C5.70287 6.92477 4.41885 5.88769 3.39 4.62C3.02914 5.25017 2.83952 5.96382 2.84 6.69C2.83872 7.36438 3.00422 8.02862 3.32176 8.62356C3.63929 9.21851 4.09902 9.72571 4.66 10.1C4.00798 10.0823 3.36989 9.9073 2.8 9.59V9.64C2.80489 10.5849 3.13599 11.4991 3.73731 12.228C4.33864 12.9568 5.17326 13.4556 6.1 13.64C5.74326 13.7486 5.37288 13.8058 5 13.81C4.74189 13.807 4.48442 13.7836 4.23 13.74C4.49391 14.5528 5.00462 15.2631 5.69107 15.7722C6.37753 16.2812 7.20558 16.5636 8.06 16.58C6.6172 17.7153 4.83588 18.3349 3 18.34C2.66574 18.3411 2.33174 18.3211 2 18.28C3.87443 19.4903 6.05881 20.1327 8.29 20.13C9.82969 20.146 11.3571 19.855 12.7831 19.2741C14.2091 18.6931 15.505 17.8339 16.5952 16.7465C17.6854 15.6591 18.548 14.3654 19.1326 12.9409C19.7172 11.5164 20.012 9.98973 20 8.45C20 8.28 20 8.1 20 7.92C20.7847 7.33481 21.4615 6.61743 22 5.8Z" fill="white"/></svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M23 9.71C23.0495 8.27865 22.7364 6.85802 22.09 5.58C21.6514 5.0556 21.0427 4.70171 20.37 4.58C17.5875 4.32753 14.7935 4.22404 12 4.27C9.21665 4.22196 6.43271 4.3221 3.66 4.57C3.11182 4.66972 2.60452 4.92684 2.2 5.31C1.3 6.14 1.2 7.56 1.1 8.76C0.954912 10.9176 0.954912 13.0824 1.1 15.24C1.12893 15.9154 1.22949 16.5858 1.4 17.24C1.52058 17.7451 1.76452 18.2123 2.11 18.6C2.51727 19.0035 3.03638 19.2752 3.6 19.38C5.75592 19.6461 7.92822 19.7564 10.1 19.71C13.6 19.76 16.67 19.71 20.3 19.43C20.8775 19.3316 21.4112 19.0595 21.83 18.65C22.11 18.3699 22.3191 18.0271 22.44 17.65C22.7976 16.5526 22.9733 15.4041 22.96 14.25C23 13.69 23 10.31 23 9.71ZM9.74 14.85V8.66L15.66 11.77C14 12.69 11.81 13.73 9.74 14.85Z" fill="white"/></svg>
+                </a>
+            </div>
         </div>
     </div>
 </footer>

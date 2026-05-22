@@ -33,8 +33,10 @@
         <div class="navbar__inner">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar__logo" aria-label="<?php esc_attr_e('Estatein - Home', 'estatein'); ?>">
                 <svg class="navbar__logo-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                    <rect width="48" height="48" rx="12" fill="var(--color-accent)"/>
-                    <path d="M14 34V18L24 12L34 18V34H28V26H20V34H14Z" fill="white"/>
+                    <path d="M24 48C10.7467 48 0 37.2533 0 24H24V48Z" fill="var(--color-accent)"/>
+                    <path d="M0 0C13.2533 0 24 10.7467 24 24H0V0Z" fill="var(--color-accent)"/>
+                    <path d="M24 48C37.2533 48 48 37.2533 48 24H24V48Z" fill="var(--color-accent)"/>
+                    <path d="M48 24C48 10.7467 37.2533 0 24 0V24H48Z" fill="var(--color-accent)"/>
                 </svg>
                 <span class="navbar__logo-text">Estatein</span>
             </a>

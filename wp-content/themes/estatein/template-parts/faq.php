@@ -20,9 +20,9 @@ $faqs = [
         <div class="section__header">
             <div>
                 <div class="section__icon" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
-                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
-                    <svg width="8" height="8" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.5L11.5 10L12.5 15L8 12.5L3.5 15L4.5 10L1 6.5L6 5.5L8 1Z" fill="currentColor"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.5 8 16 11.5 24 12C16 12.5 12.5 16 12 24C11.5 16 8 12.5 0 12C8 11.5 11.5 8 12 0Z" fill="currentColor"/></svg>
                 </div>
                 <h2 class="section__title">Frequently Asked Questions</h2>
                 <p class="section__description">Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.</p>
@@ -43,12 +43,12 @@ $faqs = [
         </div>
 
         <div class="pagination">
-            <span class="pagination__text">01 of 10</span>
+            <span class="pagination__text"><span class="pagination__current">01</span> <span class="pagination__total">of 10</span></span>
             <div class="pagination__arrows">
-                <button class="pagination__arrow" aria-label="<?php esc_attr_e('Previous questions', 'estatein'); ?>">
+                <button class="pagination__arrow pagination__arrow--prev" aria-label="<?php esc_attr_e('Previous questions', 'estatein'); ?>">
                     <svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
-                <button class="pagination__arrow" aria-label="<?php esc_attr_e('Next questions', 'estatein'); ?>">
+                <button class="pagination__arrow pagination__arrow--next" aria-label="<?php esc_attr_e('Next questions', 'estatein'); ?>">
                     <svg viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
             </div>
