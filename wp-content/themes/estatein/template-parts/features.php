@@ -1,4 +1,5 @@
 <section class="features" aria-label="<?php esc_attr_e('Our Features', 'estatein'); ?>">
+    <h2 class="sr-only"><?php esc_html_e('Our Features', 'estatein'); ?></h2>
     <div class="features__grid container">
         <div class="feature-card card">
             <div class="feature-card__icon-wrapper">
