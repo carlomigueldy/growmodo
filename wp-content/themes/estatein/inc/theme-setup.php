@@ -59,6 +59,13 @@ function estatein_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'estatein_enqueue_assets');
 
+function estatein_get_field($field, $post_id = false) {
+    if (function_exists('get_field')) {
+        return get_field($field, $post_id);
+    }
+    return null;
+}
+
 function estatein_add_open_graph_meta() {
     if (is_front_page()) {
         echo '<meta property="og:title" content="' . esc_attr(get_bloginfo('name')) . '">' . "\n";

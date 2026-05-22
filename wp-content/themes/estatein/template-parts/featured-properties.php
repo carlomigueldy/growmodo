@@ -26,11 +26,11 @@ $total = wp_count_posts('property')->publish;
         <?php if ($properties->have_posts()) : ?>
             <div class="property-grid">
                 <?php while ($properties->have_posts()) : $properties->the_post();
-                    $price    = get_field('property_price');
-                    $beds     = get_field('property_bedrooms');
-                    $baths    = get_field('property_bathrooms');
-                    $type     = get_field('property_type');
-                    $short    = get_field('property_description_short');
+                    $price    = estatein_get_field('property_price');
+                    $beds     = estatein_get_field('property_bedrooms');
+                    $baths    = estatein_get_field('property_bathrooms');
+                    $type     = estatein_get_field('property_type');
+                    $short    = estatein_get_field('property_description_short');
                     $type_labels = [
                         'villa'     => 'Villa',
                         'apartment' => 'Apartment',
