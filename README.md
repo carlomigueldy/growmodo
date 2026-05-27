@@ -10,6 +10,12 @@
 ![Docker](https://img.shields.io/badge/Docker-compose-2496ED?logo=docker&logoColor=white)
 ![License GPL-2.0](https://img.shields.io/badge/license-GPL--2.0-A42E2B)
 
+> ⏱ **Time-boxed delivery — 3h 11m of a 4h budget.**
+>
+> Assessment window: [`9850b5d`](https://github.com/carlomigueldy/growmodo/commit/9850b5dc26b33cf2a91c7b2830394bf12ad4f105) (May 22, 2026 · 17:48 SGT) → [`81c4161`](https://github.com/carlomigueldy/growmodo/commit/81c4161e61e60dbaa76b78cf2075ef03db6e9ebd) (May 22, 2026 · 20:59 SGT). 26 commits in window.
+>
+> This README revamp, demo screenshots, and design docs were added on May 28 and sit outside the assessment timer.
+
 ## Table of Contents
 
 - [Overview](#overview)
